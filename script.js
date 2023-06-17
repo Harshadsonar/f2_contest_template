@@ -5,34 +5,35 @@ let arr = [
 ];
 
 function PrintDeveloperbyMap() {
-    const developers = arr.filter((item) => item.profession === "developer");
-    console.log(developers);
+    const developers = arr.filter((employee) => employee.profession === "developer");
+    developers.map((developer) => console.log(developer));
 }
 
 function PrintDeveloperbyForEach() {
-    arr.forEach((item) => {
-        if (item.profession === "developer") {
-            console.log(item);
+    arr.forEach((employee) => {
+        if (employee.profession === "developer") {
+            console.log(employee);
         }
     });
 }
 
 function addData() {
-    const newData = { id: 4, name: "mark", age: "22", profession: "developer" };
+    const newData = { id: 4, name: "susan", age: "20", profession: "intern" };
     arr.push(newData);
     console.log(arr);
 }
 
 function removeAdmin() {
-    const filteredArray = arr.filter((item) => item.profession !== "admin");
+    const filteredArray = arr.filter((employee) => employee.profession !== "admin");
     console.log(filteredArray);
 }
 
-function concatenateArray() {
-    const arr2 = [
-        { id: 4, name: "sarah", age: "21", profession: "developer" },
-        { id: 5, name: "emma", age: "23", profession: "developer" },
+function ConcatinateArray() {
+    const newArray = [
+        { id: 4, name: "emma", age: "21", profession: "designer" },
+        { id: 5, name: "james", age: "23", profession: "developer" },
+        { id: 6, name: "sophia", age: "22", profession: "developer" },
     ];
-    const concatenatedArray = arr.concat(arr2);
+    const concatenatedArray = arr.concat(newArray);
     console.log(concatenatedArray);
 }
