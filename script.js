@@ -26,14 +26,16 @@ function addData() {
 function removeAdmin() {
     const filteredArray = arr.filter((employee) => employee.profession !== "admin");
     console.log(filteredArray);
+    arr = filteredArray;
 }
 
-function ConcatinateArray() {
+function concatenatedArray() {
     const newArray = [
         { id: 4, name: "emma", age: "21", profession: "designer" },
         { id: 5, name: "james", age: "23", profession: "developer" },
         { id: 6, name: "sophia", age: "22", profession: "developer" },
     ];
     const concatenatedArray = arr.concat(newArray);
+    arr = concatenatedArray;
     console.log(concatenatedArray);
 }
